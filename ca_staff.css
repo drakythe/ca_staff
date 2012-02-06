@@ -1,0 +1,16 @@
+.view-ca-staff tr, .view-ca-staff tr.even  {
+  background: none repeat scroll 0 0 transparent;
+}
+
+.view-ca-staff tr td {
+  width: 25%
+}
+
+.view-ca-staff tr td, .view-ca-staff tr th {
+  text-align: center;
+}
+
+.view-ca-staff .views-field-field-ca-staff-s-image {
+  float: left;
+  padding: 10px;
+}
