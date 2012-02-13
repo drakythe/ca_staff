@@ -6,11 +6,15 @@
   width: 25%
 }
 
-.view-ca-staff tr td, .view-ca-staff tr th {
+.view-ca-staff tr td, .view-ca-staff tr th, .views-field-field-ca-staff-s-title {
   text-align: center;
 }
 
-.view-ca-staff .views-field-field-ca-staff-s-image {
+#staff-images {
   float: left;
-  padding: 10px;
+  padding: 30px;
+}
+
+#staff-images .views-field-field-ca-staff-s-image-1 a {
+  padding: 0 5px 5px 0;
 }
