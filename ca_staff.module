@@ -50,3 +50,21 @@ function ca_staff_menu() {
 function ca_staff_menu_alter(&$items) {
   $items['staff']['title'] = variable_get('ca_staff_menu_title', 'Staff');
 }
+
+/**
+ * Implements hook_panels_pre_render().
+ */
+function ca_staff_panels_pre_render($panel, $renderer) {
+  if (isset($panel->content['7']) && $panel->content['7']->subtype == 'ca_staff-ca_staff_grid_1') {
+    $panel->title = variable_get('ca_staff_panel_title', 'Staff');
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function ca_staff_views_pre_view(&$view, &$display_id, &$args) {
+  if ($display_id == 'ca_staff_grid_1') {
+    $view->set_items_per_page(variable_get('ca_staff_grid_count', 16));
+  }
+}
