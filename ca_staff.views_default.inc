@@ -28,7 +28,7 @@ function ca_staff_views_default_views() {
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '24';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '16';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
@@ -139,7 +139,7 @@ function ca_staff_views_default_views() {
   );
 
   /* Display: CA Staff: Grid View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Staff: Grid View Template One', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'CA Staff: Grid View Template One', 'ca_staff_grid_1');
   $handler->display->display_options['pane_title'] = 'CA Staff: Grid View';
 
   /* Display: CA Staff: Sort */

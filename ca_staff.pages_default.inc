@@ -173,7 +173,7 @@ function ca_staff_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-panel_pane_1';
+    $pane->subtype = 'ca_staff-ca_staff_grid_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -184,11 +184,11 @@ function ca_staff_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['middle'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_staff'] = $page;
