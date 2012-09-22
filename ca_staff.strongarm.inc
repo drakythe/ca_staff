@@ -14,7 +14,7 @@ function ca_staff_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ca_staff';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-weight-settings';
   $export['additional_settings__active_tab_ca_staff'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -116,6 +116,34 @@ function ca_staff_strongarm() {
   $strongarm->name = 'save_continue_staff';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_staff'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_default_ca_staff';
+  $strongarm->value = '0';
+  $export['weight_default_ca_staff'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_enabled_ca_staff';
+  $strongarm->value = '1';
+  $export['weight_enabled_ca_staff'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_menu_ca_staff';
+  $strongarm->value = '0';
+  $export['weight_menu_ca_staff'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_range_ca_staff';
+  $strongarm->value = '50';
+  $export['weight_range_ca_staff'] = $strongarm;
 
   return $export;
 }
