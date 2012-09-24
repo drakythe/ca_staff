@@ -10,7 +10,7 @@
 function ca_staff_user_default_roles() {
   $roles = array();
 
-  // Exported role: staff admin
+  // Exported role: staff admin.
   $roles['staff admin'] = array(
     'name' => 'staff admin',
     'weight' => '4',
