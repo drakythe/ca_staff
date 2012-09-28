@@ -59,7 +59,7 @@ function ca_staff_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-panel_pane_4';
+    $pane->subtype = 'ca_staff-ca_staff_node_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -338,7 +338,7 @@ function ca_staff_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-panel_pane_3';
+    $pane->subtype = 'ca_staff-ca_staff_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -436,7 +436,7 @@ function ca_staff_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-panel_pane_2';
+    $pane->subtype = 'ca_staff-ca_staff_sort';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
