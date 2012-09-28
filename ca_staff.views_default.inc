@@ -69,6 +69,10 @@ function ca_staff_views_default_views() {
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -90,7 +94,7 @@ function ca_staff_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Staff: Grid View';
 
   /* Display: CA Staff: Sort */
-  $handler = $view->new_display('panel_pane', 'CA Staff: Sort', 'panel_pane_2');
+  $handler = $view->new_display('panel_pane', 'CA Staff: Sort', 'ca_staff_sort');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -152,7 +156,7 @@ function ca_staff_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Staff: Sort';
 
   /* Display: CA Staff: Admin */
-  $handler = $view->new_display('panel_pane', 'CA Staff: Admin', 'panel_pane_3');
+  $handler = $view->new_display('panel_pane', 'CA Staff: Admin', 'ca_staff_admin');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -225,6 +229,13 @@ function ca_staff_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
+    'action::views_bulk_operations_script_action' => array(
+      'selected' => 0,
+      'use_queue' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
     'action::node_make_sticky_action' => array(
       'selected' => 0,
       'use_queue' => 0,
@@ -238,6 +249,19 @@ function ca_staff_views_default_views() {
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
+    ),
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 0,
+      'use_queue' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 1,
+        'display_values' => array(
+          '_all_' => '_all_',
+        ),
+      ),
     ),
     'action::views_bulk_operations_argument_selector_action' => array(
       'selected' => 0,
@@ -258,7 +282,7 @@ function ca_staff_views_default_views() {
     'action::node_publish_action' => array(
       'selected' => 1,
       'use_queue' => 0,
-      'skip_confirmation' => 0,
+      'skip_confirmation' => 1,
       'override_label' => 0,
       'label' => '',
     ),
@@ -304,6 +328,13 @@ function ca_staff_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
+    'action::pathauto_node_update_action' => array(
+      'selected' => 0,
+      'use_queue' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -334,9 +365,10 @@ function ca_staff_views_default_views() {
     'ca_staff' => 'ca_staff',
   );
   $handler->display->display_options['pane_title'] = 'CA Staff: Admin';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Staff: Node View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Staff: Node View Template One', 'panel_pane_4');
+  $handler = $view->new_display('panel_pane', 'CA Staff: Node View Template One', 'ca_staff_node_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
