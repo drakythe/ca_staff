@@ -59,7 +59,7 @@ function ca_staff_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-ca_staff_node_1';
+    $pane->subtype = 'ca_staff_node-ca_staff_node_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -67,13 +67,10 @@ function ca_staff_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => 'staff-images',
-      'css_class' => '',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-1'] = $pane;
     $display->panels['middle'][0] = 'new-1';
     $pane = new stdClass();
@@ -99,7 +96,7 @@ function ca_staff_default_page_manager_handlers() {
     $display->content['new-2'] = $pane;
     $display->panels['middle'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_staff_node_view_panel_context'] = $handler;
 
@@ -173,7 +170,7 @@ function ca_staff_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-ca_staff_grid_1';
+    $pane->subtype = 'ca_staff_list-ca_staff_grid_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -338,7 +335,7 @@ function ca_staff_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-ca_staff_admin';
+    $pane->subtype = 'ca_staff_admin-ca_staff_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -349,11 +346,11 @@ function ca_staff_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['middle'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_staff_admin'] = $page;
@@ -436,7 +433,7 @@ function ca_staff_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_staff-ca_staff_sort';
+    $pane->subtype = 'ca_staff_sort-ca_staff_sort';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -447,11 +444,11 @@ function ca_staff_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['middle'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_staff_sort'] = $page;
