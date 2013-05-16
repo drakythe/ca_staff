@@ -14,7 +14,7 @@ function ca_staff_user_default_permissions() {
   $permissions['create ca_staff content'] = array(
     'name' => 'create ca_staff content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'staff admin' => 'staff admin',
       'webmaster' => 'webmaster',
     ),
@@ -25,7 +25,7 @@ function ca_staff_user_default_permissions() {
   $permissions['delete any ca_staff content'] = array(
     'name' => 'delete any ca_staff content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'staff admin' => 'staff admin',
       'webmaster' => 'webmaster',
     ),
@@ -36,7 +36,7 @@ function ca_staff_user_default_permissions() {
   $permissions['delete own ca_staff content'] = array(
     'name' => 'delete own ca_staff content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'staff admin' => 'staff admin',
       'webmaster' => 'webmaster',
     ),
@@ -47,7 +47,7 @@ function ca_staff_user_default_permissions() {
   $permissions['edit any ca_staff content'] = array(
     'name' => 'edit any ca_staff content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'staff admin' => 'staff admin',
       'webmaster' => 'webmaster',
     ),
@@ -58,7 +58,7 @@ function ca_staff_user_default_permissions() {
   $permissions['edit own ca_staff content'] = array(
     'name' => 'edit own ca_staff content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'staff admin' => 'staff admin',
       'webmaster' => 'webmaster',
     ),
