@@ -38,6 +38,16 @@ function ca_staff_settings_form() {
     '#required' => TRUE,
     '#description' => t('How many staff members would you like displayed per page? (must be in increments of 4)'),
   );
+  $form['ca_staff_list_template'] = array(
+    '#type' => 'select',
+    '#title' => t('Staff\'s list template'),
+    '#options' => array(
+      'ca_staff_list_template_one' => t('Template one'),
+      'ca_staff_list_template_two' => t('Template two'),
+    ),
+    '#required' => TRUE,
+    '#default_value' => variable_get('ca_staff_list_template', 'ca_staff_list_template_one'),
+  );
   
   return system_settings_form($form);
 }
